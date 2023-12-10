@@ -17,7 +17,7 @@ export type userOrders = {
     quantity: number,
 }
 
-export type Student = {
+export type Students = {
     userId: number,
     userName: string,
     password: string,
@@ -25,7 +25,7 @@ export type Student = {
     age: number,
     email: string,
     isActive: boolean,
-    hobbies: userHobbies,
+    hobbies: string[],
     address: userAddress,
     orders: userOrders,
 
