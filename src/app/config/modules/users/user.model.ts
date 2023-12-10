@@ -1,5 +1,5 @@
-import { Schema } from "mongoose";
-import { Students, userAddress, userHobbies, userName, userOrders } from "./user.interface";
+import { Schema, model } from "mongoose";
+import { Users, userAddress, userHobbies, userName, userOrders } from "./user.interface";
 
 const userNameScheam = new Schema<userName>({
     firstName: {
@@ -52,7 +52,7 @@ const userOrdersSchema = new Schema<userOrders>({
 })
 
 
-const userSchema = new Schema<Students>({
+const userSchema = new Schema<Users>({
     userId: {
         type: Number,
         unique: true,
@@ -84,3 +84,5 @@ const userSchema = new Schema<Students>({
     address: userAddressSchema,
     orders: userOrdersSchema,
 })
+
+export const UsersModel = model<Users>('Users', userSchema)

@@ -17,7 +17,7 @@ export type userOrders = {
     quantity: number,
 }
 
-export type Students = {
+export type Users = {
     userId: number,
     userName: string,
     password: string,
